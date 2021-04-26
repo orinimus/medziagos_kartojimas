@@ -18,7 +18,7 @@ namespace medziagos_kartojimas
 
         public override string NameMetodas()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             var balses = "aeėiouy".ToList();
             foreach (var raide in Name)
             {
@@ -31,7 +31,7 @@ namespace medziagos_kartojimas
                     sb.Append(raide);
                 }
             }
-            return sb;
+            return sb.ToString();
         }
     }
 }
