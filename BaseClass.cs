@@ -4,7 +4,7 @@ using System.Text;
 
 namespace medziagos_kartojimas
 {
-    abstract class BaseClass
+    public abstract class BaseClass
     {
         protected BaseClass(string name)
         {
@@ -13,14 +13,9 @@ namespace medziagos_kartojimas
 
         public string Name { get;}
 
+        public abstract string NameMetodas();
 
-        abstract string NameMetodas()
-        {
-        }
-
-        abstract int NameKodas(int parametras)
-        {
-
-        } 
+        public abstract int NameKodas(int parametras);
+        
     }
 }
