@@ -18,12 +18,20 @@ namespace medziagos_kartojimas
 
         public override string NameMetodas()
         {
+            StringBuilder sb = new StringBuilder();
             var balses = "aeėiouy".ToList();
             foreach (var raide in Name)
             {
-                balses.Contains(raide) ? a = int(raide) : raide;
-               
+                if (balses.Contains(raide))
+                {
+                    sb.Append(Convert.ToInt32(raide));
+                }
+                else
+                {
+                    sb.Append(raide);
+                }
             }
+            return sb;
         }
     }
 }
