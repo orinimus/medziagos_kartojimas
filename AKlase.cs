@@ -19,7 +19,6 @@ namespace medziagos_kartojimas
         public override string NameMetodas()
         {
             var balses = "aeėiouy".ToList();
-            string tekstas = "bebras";
             foreach (var raide in Name)
             {
                 balses.Contains(raide) ? a = int(raide) : raide;
