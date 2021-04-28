@@ -4,7 +4,7 @@ using System.Text;
 
 namespace medziagos_kartojimas
 {
-    public class Spalva : ISpalva
+    public class Spalva
     {
         public Spalva()
         {
@@ -29,9 +29,9 @@ namespace medziagos_kartojimas
             Blue = blue;
         }
 
-        public void GreyScaleValue(byte red, byte green, byte blue)
+        public byte GetGreyScaleValue()
         {
-            Console.WriteLine($"Greyscale value is {(byte)((red+green+blue)/3)}");    
+            return (byte)((Red+Green+Blue)/3);    
         }
 
     }
