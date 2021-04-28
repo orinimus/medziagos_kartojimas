@@ -6,17 +6,33 @@ namespace medziagos_kartojimas
 {
     public class Spalva : ISpalva
     {
-        public Spalva(byte red=0, byte green=0, byte blue=0)
+        public Spalva()
+        {
+            Red = Green = Blue = 255;
+        }
+
+        public Spalva(byte red, byte green, byte blue)
         {
             Red = red;
             Green = green;
             Blue = blue;
         }
 
-        public byte Red { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public byte Green { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public byte Blue { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public byte Red { get; private set; }
+        public byte Green { get; private set; }
+        public byte Blue { get; private set; }
 
+        public void SetColors(byte red, byte green, byte blue)
+        {
+            Red = red;
+            Green = green;
+            Blue = blue;
+        }
+
+        public void GreyScaleValue(byte red, byte green, byte blue)
+        {
+            Console.WriteLine($"Greyscale value is {(byte)((red+green+blue)/3)}");    
+        }
 
     }
 }
