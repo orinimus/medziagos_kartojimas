@@ -1,13 +1,13 @@
 ﻿namespace medziagos_kartojimas
 {
-    public class Kamuolys : Spalva 
+    public class Kamuolys : Zaislas
     {
-
-        public Kamuolys(byte red, byte green, byte blue, int dydis) : base(red, green, blue)
+        public Kamuolys(int metimas) : base(metimas)
         {
-            Dydis = dydis;
         }
 
-        public int Dydis { get; set; }
+        public Kamuolys(int dydis) : base(dydis)
+        {
+        }
     }
 }

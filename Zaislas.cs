@@ -4,7 +4,7 @@ using System.Text;
 
 namespace medziagos_kartojimas
 {
-    public abstract class Zaislas
+    public abstract class Zaislas: Spalva
     {
         public int Metimas { get; set; }
         public int Dydis { get; set; }
@@ -18,7 +18,6 @@ namespace medziagos_kartojimas
         {
             Dydis = dydis;
         }
-
 
         public virtual int Mesti() => Metimas + 1;
 
