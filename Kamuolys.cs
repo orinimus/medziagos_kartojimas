@@ -1,12 +1,12 @@
-﻿namespace medziagos_kartojimas
+﻿using System.Collections.Generic;
+
+namespace medziagos_kartojimas
 {
     public class Kamuolys : Zaislas
     {
-        public Kamuolys(int metimas) : base(metimas)
-        {
-        }
+        public List<Spalva> SpalvosKodas { get; set; }
 
-        public Kamuolys(int dydis) : base(dydis)
+        public Kamuolys(byte dydis) : base(dydis)
         {
         }
     }

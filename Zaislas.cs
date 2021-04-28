@@ -7,14 +7,14 @@ namespace medziagos_kartojimas
     public abstract class Zaislas: Spalva
     {
         public int Metimas { get; set; }
-        public int Dydis { get; set; }
+        public byte Dydis { get; set; }
 
         protected Zaislas(int metimas)
         {
             Metimas = metimas;
         }
 
-        protected Zaislas(int dydis)
+        protected Zaislas(byte dydis)
         {
             Dydis = dydis;
         }
